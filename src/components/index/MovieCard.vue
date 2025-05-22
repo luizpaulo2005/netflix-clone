@@ -27,7 +27,7 @@ defineProps({
       class="movie-card flex-none w-[180px] transition-transform duration-300 relative"
     >
       <img
-        src="https://placehold.co/180x270/000000/FFFFFF?text=Filme+1"
+        :src="`https://placehold.co/180x270/000000/FFFFFF?text=${titulo}`"
         :alt="titulo"
         class="rounded-md w-full"
       />

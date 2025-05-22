@@ -14,7 +14,7 @@ defineProps({
 <template>
   <div class="movie-card transition-transform duration-300 relative">
     <img
-      src="https://placehold.co/180x270/000000/FFFFFF?text=Sugestão+1"
+      :src="`https://placehold.co/180x270/000000/FFFFFF?text=${encodeURIComponent(titulo)}`"
       :alt="titulo"
       class="rounded-md w-full"
     />

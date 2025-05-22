@@ -19,7 +19,7 @@ defineProps({
   <div class="flex gap-3 p-2 hover:bg-white/10 rounded-md transition-colors">
     <div class="w-24 h-16 flex-shrink-0">
       <img
-        src="https://placehold.co/160x90/000000/FFFFFF?text=Ep+4"
+        :src="`https://placehold.co/160x90/000000/FFFFFF?text=Ep+${episodio}`"
         :alt="`Episódio ${episodio}`"
         class="w-full h-full object-cover rounded"
       />
