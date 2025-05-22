@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import InfoEps from "@/components/assistir/InfoEps.vue";
+</script>
+
 <template>
   <section class="py-8 px-4 md:px-16 bg-netflix-black">
     <div class="max-w-6xl mx-auto">
@@ -44,81 +48,13 @@
         <div class="md:w-1/3">
           <h3 class="text-lg font-bold mb-3">Mais episódios</h3>
           <div class="space-y-4">
-            <div class="flex gap-3 p-2 bg-white/10 rounded-md">
-              <div class="w-24 h-16 flex-shrink-0 relative">
-                <img
-                  src="https://placehold.co/160x90/000000/FFFFFF?text=Ep+1"
-                  alt="Episódio 1"
-                  class="w-full h-full object-cover rounded"
-                />
-                <div class="absolute inset-0 flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <p class="font-medium">1. O Desaparecimento de Will Byers</p>
-                <p class="text-sm text-netflix-gray">50 min</p>
-              </div>
-            </div>
-
-            <div
-              class="flex gap-3 p-2 hover:bg-white/10 rounded-md transition-colors"
-            >
-              <div class="w-24 h-16 flex-shrink-0">
-                <img
-                  src="https://placehold.co/160x90/000000/FFFFFF?text=Ep+2"
-                  alt="Episódio 2"
-                  class="w-full h-full object-cover rounded"
-                />
-              </div>
-              <div>
-                <p class="font-medium">2. A Estranha na Rua Maple</p>
-                <p class="text-sm text-netflix-gray">48 min</p>
-              </div>
-            </div>
-
-            <div
-              class="flex gap-3 p-2 hover:bg-white/10 rounded-md transition-colors"
-            >
-              <div class="w-24 h-16 flex-shrink-0">
-                <img
-                  src="https://placehold.co/160x90/000000/FFFFFF?text=Ep+3"
-                  alt="Episódio 3"
-                  class="w-full h-full object-cover rounded"
-                />
-              </div>
-              <div>
-                <p class="font-medium">3. Luzes de Natal</p>
-                <p class="text-sm text-netflix-gray">51 min</p>
-              </div>
-            </div>
-
-            <div
-              class="flex gap-3 p-2 hover:bg-white/10 rounded-md transition-colors"
-            >
-              <div class="w-24 h-16 flex-shrink-0">
-                <img
-                  src="https://placehold.co/160x90/000000/FFFFFF?text=Ep+4"
-                  alt="Episódio 4"
-                  class="w-full h-full object-cover rounded"
-                />
-              </div>
-              <div>
-                <p class="font-medium">4. O Corpo</p>
-                <p class="text-sm text-netflix-gray">47 min</p>
-              </div>
-            </div>
+            <InfoEps
+              v-for="i in 4"
+              :key="i"
+              :episodio="i"
+              :titulo="`Episódio ${i}`"
+              :tempo="Math.floor(Math.random() * 100)"
+            />
           </div>
         </div>
       </div>
