@@ -4,6 +4,7 @@ import Player from '@/components/assistir/Player.vue'
 import Info from '@/components/assistir/Info.vue'
 import Related from '@/components/assistir/Related.vue'
 import Reviews from '@/components/assistir/Reviews.vue'
+import Footer from '@/components/assistir/Footer.vue'
 </script>
 
 <template>
